@@ -83,7 +83,7 @@ describe('strings-tasks', () => {
     assert.equal(tasks.removeLeadingWhitespaces('    '), '');
     assert.equal(tasks.removeLeadingWhitespaces('\t\t\t'), '');
     assert.equal(tasks.removeLeadingWhitespaces('\n\n\n'), '');
-  });
+  });+
 
   it.optional('removeTrailingWhitespaces should remove trailing whitespaces from the string', () => {
     assert.equal(tasks.removeTrailingWhitespaces('  Abracadabra'), '  Abracadabra');
@@ -120,7 +120,7 @@ describe('strings-tasks', () => {
   it.optional('removeLastOccurrences should remove the last occurrence of a substring from a string', () => {
     assert.equal(tasks.removeLastOccurrences('To be or not to be', 'be'), 'To be or not to ');
     assert.equal(tasks.removeLastOccurrences('I like legends', 'end'), 'I like legs');
-    assert.equal(tasks.removeLastOccurrences('ABABAB', 'BA'), 'ABAB');
+    assert.equal(tasks.removeLastOccurrences('ABABAB', 'BA'), 'ABAB');  
     assert.equal(tasks.removeLastOccurrences('', 'test'), '');
     assert.equal(tasks.removeLastOccurrences('Hello, World!', ''), 'Hello, World!');
     assert.equal(tasks.removeLastOccurrences('The quick brown fox', 'dog'), 'The quick brown fox');
@@ -304,7 +304,7 @@ describe('strings-tasks', () => {
       'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
     ].forEach((val, index) => {
       assert.equal(
-        tasks.getCardId(val),
+        tasks.getCardId(val, index),
         index,
         `Invalid id for card '${val}':`,
       );
